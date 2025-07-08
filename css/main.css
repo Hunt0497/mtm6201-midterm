@@ -582,12 +582,12 @@ section h2 {
     .cta-wrapper .container{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: none;
+        gap: 0;
     }
 
     .about-flex {
         grid-template-columns: 1fr 1fr;
-        gap: none;
+        gap: 2rem;
         margin: 3em 0 6em 0;
     }
     .about-content {
