@@ -14,43 +14,43 @@
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
     <title>My Coffee Shop</title>
 </head>
-<body>
+<body itemscope itemtype="http://schema.org/CafeOrCoffeeShop">
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
-    <header class="header">
+    <header class="header" role="banner">
         <div class="container">
             <div class="header-flex">
-                <a href="#" class="logo">
-                    <img src="images/my-coffee-shop-logo.svg" alt="My Coffee Shop Logo">
+                <a href="#" class="logo" itemprop="url">
+                    <img src="images/my-coffee-shop-logo.svg" alt="My Coffee Shop Logo" itemprop="logo">
+                    <span itemprop="name" class="visually-hidden">My Coffee Shop</span>
                 </a>
-                <nav class="main-nav">
-                    <button class="nav-toggle" aria-label="toggle navigation">
+                <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+                    <button class="nav-toggle" aria-label="toggle navigation" aria-expanded="false" aria-controls="nav-links-list">
                         <span class="hamburger"></span>
                     </button>
-                    <ul class="nav-links">
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#menu">Menu</a></li>
-                        <li><a href="#locations">Locations</a></li>
+                    <ul class="nav-links" id="nav-links-list" role="menubar">
+                        <li role="none"><a href="#about" role="menuitem">About Us</a></li>
+                        <li role="none"><a href="#menu" role="menuitem">Menu</a></li>
+                        <li role="none"><a href="#locations" role="menuitem">Locations</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="hero-content">
                 <h1 class="fade-in">Experience Coffee Like Never Before</h1>
-                <p class="fade-in">We craft more than beverages; we curate memories, one flavourful moment at a time. Embrace the aroma and let every visit be a chapter in your coffee story.</p>
+                <p class="fade-in" itemprop="description">We craft more than beverages; we curate memories, one flavourful moment at a time. Embrace the aroma and let every visit be a chapter in your coffee story.</p>
                 <a href="#menu" class="btn btn-primary fade-in">Explore Our Menu</a>
             </div>
         </div>
     </header>
 
-    <main id="main-content">
-        <section class="experience">
+    <main id="main-content" role="main">
+        <section class="experience" aria-labelledby="experience-heading">
             <div class="container">
                 <h3 class="subheading">Welcome to My Coffee House</h3>
-                <h2>Experience a New Way to Taste Coffee</h2>
+                <h2 id="experience-heading" class="visually-hidden-experience">Experience a New Way to Taste Coffee</h2>
         
                 <div class="gallery-grid">
                     <img src="images/latte.jpeg" alt="Barista pouring latte art into a coffee cup">
-                    
                     <img src="images/coffee-beans.jpeg" alt="Close-up of roasted coffee beans">
                     <img src="images/pouring-coffee.jpeg" alt="Pouring hot water over coffee grounds in a pour-over cone">
                     <img src="images/three-cups.jpeg" alt="Three cups of coffee with different latte art designs">
@@ -59,25 +59,25 @@
             </div>
         </section>
 
-        <section class="why-visit">
+        <section class="why-visit" aria-labelledby="why-visit-heading">
             <div class="container">
                 <h3 class="subheading">What We Offer</h3>
-                <h2>Why Visit Us?</h2>
+                <h2 id="why-visit-heading">Why Visit Us?</h2>
                 <div class="features-grid">
-                    <div class="feature-item">
+                    <div class="feature-item" itemscope itemtype="http://schema.org/Offer">
                         <img src="images/fair-trade.svg" alt="Fair trade icon">
-                        <h3>Fair Trade Coffee</h3>
-                        <p>We build direct relationships with the farmers and producers who help in the development of delicious, sustainable and organic coffee.</p>
+                        <h3 itemprop="name">Fair Trade Coffee</h3>
+                        <p itemprop="description">We build direct relationships with the farmers and producers who help in the development of delicious, sustainable and organic coffee.</p>
                     </div>
-                    <div class="feature-item">
+                    <div class="feature-item" itemscope itemtype="http://schema.org/Offer">
                         <img src="images/local-baked-goods.svg" alt="Baked goods icon">
-                        <h3>Local Baked Goods</h3>
-                        <p>We use local products to bake our goods and bring in a variety of treats from local bakers with our community.</p>
+                        <h3 itemprop="name">Local Baked Goods</h3>
+                        <p itemprop="description">We use local products to bake our goods and bring in a variety of treats from local bakers with our community.</p>
                     </div>
-                    <div class="feature-item">
+                    <div class="feature-item" itemscope itemtype="http://schema.org/Offer">
                         <img src="images/made-with-love.svg" alt="Heart in a cup icon">
-                        <h3>Made With Love</h3>
-                        <p>We value our customers and make it our priority to serve everyone with respect and a friendly smile to start their day of right.</p>
+                        <h3 itemprop="name">Made With Love</h3>
+                        <p itemprop="description">We value our customers and make it our priority to serve everyone with respect and a friendly smile to start their day of right.</p>
                     </div>
                 </div>
             </div>
@@ -85,21 +85,21 @@
 
         <div class="cta-wrapper">
             <div class="container">
-            <section class="cta-menu" id="menu">  
+            <section class="cta-menu" id="menu" aria-labelledby="menu-heading">  
                     <h3 class="subheading">Our Menu</h3>
-                    <h2>Explore What We Have to Offer You</h2>
+                    <h2 id="menu-heading">Explore What We Have to Offer You</h2>
                     <a href="#" class="btn btn-secondary">Explore Our Menu</a>
             </section>
         
-            <section class="cta-locations" id="locations">
+            <section class="cta-locations" id="locations" aria-labelledby="locations-heading">
                     <h3 class="subheading">Locations</h3>
-                    <h2>Find Your Nearest Coffee Shop</h2>
+                    <h2 id="locations-heading">Find Your Nearest Coffee Shop</h2>
                     <a href="#" class="btn btn-outline">View Locations</a>
             </section>
             </div>
         </div>
 
-        <section class="about-us" id="about">
+        <section class="about-us" id="about" aria-labelledby="about-heading">
             <div class="container">
                 <div class="about-flex">
                     <div class="about-image">
@@ -107,7 +107,7 @@
                     </div>
                     <div class="about-content">
                         <h3 class="subheading">About Us</h3>
-                        <h2>Read Our Story</h2>
+                        <h2 id="about-heading">Read Our Story</h2>
                         <p>In the heart of our community, My Coffee House emerged as a humble local coffee shop that sought to redefine the coffee experience. Founded with a passion for quality brews and a commitment to fostering genuine connections, we embarked on this journey with a vision to create a warm and inviting space for coffee enthusiasts and casual patrons alike.</p>
                         <p>My Coffee House quickly became a cherished gathering spot, where the rich aroma of freshly ground coffee beans mingled with the laughter of friends and the tapping of keyboards from those seeking a cozy workspace.</p>
                         <a href="#" class="btn btn-dark">Learn More</a>
@@ -116,43 +116,43 @@
             </div>
         </section>
 
-        <section class="testimonials" id="testimonials">
+        <section class="testimonials" id="testimonials" aria-labelledby="testimonials-heading">
             <div class="container">
                 <h3 class="subheading">Testimonials</h3>
-                <h2>What our customers say about us</h2>
+                <h2 id="testimonials-heading">What our customers say about us</h2>
         
                 <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <img src="images/testimonial-1.jpeg" alt="A happy customer, Jane O.">
+                    <div class="testimonial-card" itemscope itemtype="http://schema.org/Review">
+                        <img src="images/testimonial-1.jpeg" alt="A happy customer, Jane D.">
                         <div class="testimonial-content">
-                            <blockquote>"I always make a point to visit My Coffee Company when in Ottawa. Delicious coffee and friendly service."</blockquote>
-                            <cite>Jane O., Toronto</cite>
+                            <blockquote itemprop="reviewBody">"I always make a point to visit My Coffee Company when in Ottawa. Delicious coffee and friendly service."</blockquote>
+                            <cite itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Jane D., Toronto</span></cite>
                         </div>
                     </div>
-                    <div class="testimonial-card">
+                    <div class="testimonial-card" itemscope itemtype="http://schema.org/Review">
                         <img src="images/testimonial-2.jpeg" alt="A happy customer, Scott S.">
                         <div class="testimonial-content">
-                            <blockquote>"Great atmosphere to get some work done while enjoying a cup or two of incredible coffee."</blockquote>
-                            <cite>Scott S., Ottawa</cite>
+                            <blockquote itemprop="reviewBody">"Great atmosphere to get some work done while enjoying a cup or two of incredible coffee."</blockquote>
+                            <cite itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Scott S., Ottawa</span></cite>
                         </div>
                     </div>
-                    <div class="testimonial-card">
+                    <div class="testimonial-card" itemscope itemtype="http://schema.org/Review">
                         <img src="images/testimonial-3.jpeg" alt="A happy customer, Susie F.">
                         <div class="testimonial-content">
-                            <blockquote>"Best coffee in the Ottawa area and the service is top notch. Would highly recommend a visit."</blockquote>
-                            <cite>Susie F., Ottawa</cite>
+                            <blockquote itemprop="reviewBody">"Best coffee in the Ottawa area and the service is top notch. Would highly recommend a visit."</blockquote>
+                            <cite itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Susie F., Ottawa</span></cite>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        </main>
+    </main>
         
-        <footer class="footer">
-            <div class="container">
-                <p>&copy; My Coffee Company 2025</p>
-            </div>
-        </footer>
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; My Coffee Company 2025</p>
+        </div>
+    </footer>
 </body>
 </html>
