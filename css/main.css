@@ -188,6 +188,20 @@ img {
     padding: 0.5em; 
 }
 
+.nav-toggle.open .hamburger {
+    background: transparent;
+}
+
+.nav-toggle.open .hamburger::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.nav-toggle.open .hamburger::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
 /* HOW TO CREATE A HAMBURGER MENU CENTER LINE */
 .hamburger {
     display: block;
@@ -195,6 +209,7 @@ img {
     width: 25px;
     height: 3px;
     background: var(--clr-white);
+    transition: transform 0.3s ease-in-out;
 }
 
 /* NICE TRICK I LEARNED FOR TOP & BOTTOM LINES FOR HAMBURGER MENU */
@@ -206,6 +221,7 @@ img {
     height: 3px;
     background: var(--clr-white);
     left: 0;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .hamburger::before {
@@ -221,7 +237,6 @@ img {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
     gap: 1.5em;
     display: none;
 }
@@ -231,6 +246,26 @@ img {
     text-decoration: none;
     font-family: var(--ff-heading);
     font-weight: 700;
+}
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    background: rgba(0,0,0,0.9);
+    width: 200px;
+    padding: 1em 0;
+    text-align: center;
+    border-top: 1px solid var(--clr-primary);
+    z-index: 100; 
+}
+.nav-links.active a {
+    white-space: nowrap;
+    text-transform: uppercase; 
+}
+
+.nav-links.active li {
+    padding: 1em 0;
 }
 
 .nav-links a:hover,
@@ -558,7 +593,7 @@ section h2 {
     }
 
     .main-nav .nav-links {
-        display: flex; 
+        display: flex !important;
         flex-direction: row;
         text-transform: uppercase;
     }
@@ -611,5 +646,19 @@ section h2 {
     .testimonial-card {
         aspect-ratio: 2 / 2.4;
         overflow: hidden;
+    }
+    .nav-links.active {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        width: auto; 
+        background: none; 
+        padding: 0; 
+        border: none; 
+        text-transform: uppercase;
+    }
+
+    .nav-toggle {
+        display: none; 
     }
 }
